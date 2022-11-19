@@ -5,6 +5,8 @@ const form = document.querySelector(".form");
 const inputSearch = document.querySelector(".input_search");
 const btnPrev = document.querySelector(".btn_prev");
 const btnNext = document.querySelector(".btn_next");
+const pokemonType = document.querySelector(".type");
+const pokemonHeight = document.querySelector(".height");
 
 let searchPokemon = 0;
 if (searchPokemon === 0) {
@@ -34,6 +36,9 @@ const renderPokemon = async (pokemon) => {
       data["sprites"]["versions"]["generation-v"]["black-white"]["animated"][
         "front_default"
       ];
+    //pokemon type & height
+    pokemonType.innerHTML = "type: " + data.types[0].type.name;
+    pokemonHeight.innerHTML = "height: " + data.height / 10 + "m";
     searchPokemon = data.id;
     inputSearch.value = "";
   } else {
@@ -64,5 +69,4 @@ btnNext.addEventListener("click", () => {
   searchPokemon += 1;
   renderPokemon(searchPokemon);
 });
-
 renderPokemon(searchPokemon());

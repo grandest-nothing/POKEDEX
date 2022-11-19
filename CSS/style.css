@@ -47,12 +47,12 @@ main {
 .form {
   position: absolute;
   width: 65%;
-  top: 65%;
+  top: 63.5%;
   left: 13.5%;
 }
 .input_search {
   width: 100%;
-  padding: 4%;
+  padding: 3.6%;
   outline: none;
   border: 2px solid #333;
   border-radius: 7px;
@@ -60,6 +60,25 @@ main {
   color: #3a444d;
   font-size: clamp(8px, 5vw, 1rem);
   box-shadow: -3px 4px 0 #888, -5px 7px 0 #333;
+}
+.stats {
+  position: absolute;
+  background-color: green;
+  padding: 0.3%;
+  border: 2px solid #333;
+  border-radius: 7px;
+  box-shadow: inset -4px 4px 0 #222;
+  width: 30%;
+  top: 73%;
+  left: 31%;
+}
+.stats span {
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: rgb(201, 199, 199);
+  display: flex;
+  font-size: clamp(8px, 5vw, 1rem);
 }
 .buttons {
   position: absolute;
