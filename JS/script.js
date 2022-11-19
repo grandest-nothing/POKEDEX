@@ -33,7 +33,7 @@ const renderPokemon = async (pokemon) => {
     pokemonName.innerHTML = data.name;
     pokemonNumber.innerHTML = "#" + data.id;
     pokemonImage.src =
-      data["sprites"]["versions"]["generation-v"]["black-white"]["animated"][
+      data.sprites.versions["generation-v"]["black-white"]["animated"][
         "front_default"
       ];
     //pokemon type & height
